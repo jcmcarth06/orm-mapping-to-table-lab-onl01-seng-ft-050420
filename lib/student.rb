@@ -1,4 +1,5 @@
 class Student
+
  attr_accessor :name, :grade
  attr_reader :id
 
@@ -22,7 +23,6 @@ class Student
  def self.drop_table
  end
 
-
  def save
   sql = <<-SQL
     INSERT INTO student (name, grade)
@@ -31,7 +31,7 @@ class Student
 
   DB[:conn].execute(sql, self.name, self.grade)
 
-  @id = DB[:conn].execute("SELECT last_insert_rowid() FROM songs")[0][0]
+  @id = DB[:conn].execute("SELECT last_insert_rowid() FROM students)[0][0]
  end
 
 end
