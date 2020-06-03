@@ -25,7 +25,7 @@ class Student
         DROP TABLE IF EXISTS students
         SQL
 
-      DB[:conn].execute(sql, self.name, self.grade)
+      DB[:conn].execute
 
     end
 
