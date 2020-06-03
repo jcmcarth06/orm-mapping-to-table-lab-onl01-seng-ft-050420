@@ -8,7 +8,7 @@ class Student
    @id = id
  end
 
- def self.create_tavle
+ def self.create_table
    sql = <<-SQL
    create table students(
      id INTEGER PRIMARY KEY,
